@@ -14,6 +14,7 @@ function UserAPI(token) {
         try {
           const res = await axios.get(`${myHost}/user/infor`, {
             headers: { Authorization: token },
+            withCredentials: true,
           });
 
           setIsLogged(true);
@@ -21,7 +22,7 @@ function UserAPI(token) {
 
           setCart(res.data.cart);
         } catch (err) {
-          alert(err.response.data.msg);
+          alert("err.response.data.msg");
         }
       };
 

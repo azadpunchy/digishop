@@ -17,13 +17,22 @@ function Login() {
   const loginSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${myHost}/user/login`, { ...user });
+      await axios.post(
+        `${myHost}/user/login`,
+        { ...user },
+        {
+          withCredentials: true,
+        }
+      );
 
       localStorage.setItem("firstLogin", true);
 
       window.location.href = "/";
     } catch (err) {
-      alert(err.response.data.msg);
+      if (err) {
+        console.log(err.response.data.msg);
+        console.log(err);
+      }
     }
   };
 

@@ -14,6 +14,7 @@ function Header() {
   const [cart] = state.userAPI.cart;
   const [menu, setMenu] = useState(false);
 
+  console.log(state, "<----stste");
   const logoutUser = async () => {
     await axios.get(`${myHost}/user/logout`);
 

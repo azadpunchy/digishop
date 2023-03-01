@@ -15,7 +15,9 @@ export const DataProvider = ({ children }) => {
     const firstLogin = localStorage.getItem("firstLogin");
     if (firstLogin) {
       const refreshToken = async () => {
-        const res = await axios.get(`${myHost}/user/refresh_token`);
+        const res = await axios.get(`${myHost}/user/refresh_token`, {
+          withCredentials: true,
+        });
 
         setToken(res.data.accesstoken);
 
