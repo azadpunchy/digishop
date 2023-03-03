@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalState } from "../../../GlobalState";
 import axios from "axios";
-import PaypalButton from "./PaypalButton";
+// import PaypalButton from "./PaypalButton";
 import myHost from "../../../config";
 
 function Cart() {
@@ -113,11 +113,12 @@ function Cart() {
           </div>
         </div>
       ))}
+      <div className="total">${total}</div>
 
-      <div className="total">
+      {/* <div className="total">
         <h3>Total: $ {total}</h3>
         <PaypalButton total={total} tranSuccess={tranSuccess} />
-      </div>
+      </div> */}
     </div>
   );
 }
