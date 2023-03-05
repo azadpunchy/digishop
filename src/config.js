@@ -1,2 +1,2 @@
-const myHost = "http://localhost:5000";
+const myHost = "https://plain-hen-kimono.cyclic.app/";
 export default myHost;
