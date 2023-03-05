@@ -59,7 +59,7 @@ const userCtrl = {
 
       res.cookie("refreshtoken", refreshtoken, {
         httpOnly: true,
-        path: "http://localhost:3000/user/refresh_token",
+        path: "https://digishop.azadpunchy.com/user/refresh_token",
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7d
         secure: true,
         // sameSite: "none",
